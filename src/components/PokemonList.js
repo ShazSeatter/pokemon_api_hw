@@ -1,9 +1,8 @@
 import React from "react";
-import PokemonDetails from "./PokemonDetails";
 
 const PokemonList = function ({pokemons}) {
     const pokemonComponent = pokemons.map((pokemon) => {
-        return <PokemonDetails key={pokemon.id} pokemon={pokemon}/>
+        return <li className="pokemon-list-component"key={pokemon.id}>{pokemon.name}</li>
     })
 
 

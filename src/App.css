@@ -28,3 +28,10 @@ footer {
 a {
     margin-top: auto;
 }
+
+.pokemon-list-component {
+    width: 30vw;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
