@@ -29,9 +29,71 @@ a {
     margin-top: auto;
 }
 
+.pokemon-list-title {
+    margin: 3rem 5rem 3rem 5rem;
+}
+
+.pokemon-detail {
+    margin: 3rem 5rem 3rem 5rem;
+}
+
+.pokemon-component {
+    margin-left: 7rem;
+    list-style: none;
+    line-height: 30px;
+}
+
+.title-headers {
+    display:flex; 
+    justify-content: space-around;
+}
+
 .pokemon-list-component {
     width: 30vw;
     height: 60vh;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.pokemon-list-section {
+    display: flex;
+    gap: 20rem;
+}
+
+.list-pokemon-title {
+    cursor: pointer;
+}
+
+.list-pokemon-title:hover {
+    transform: scale(1.1);
+}
+
+.pokemon-card {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin-right: 6rem;
+}
+
+
+.pokemon-img {
+    height: 160px;
+    width: 180px;
+}
+
+.pokemon-abilities-list {
+    list-style: none;
+}
+
+.abilites-title {
+    margin-bottom: 0;
+}
+
+.health-section {
+    margin-left: 4rem;
+}
+
+.pokemon-types-list {
+    display: flex;
+    gap: 1rem;
 }
