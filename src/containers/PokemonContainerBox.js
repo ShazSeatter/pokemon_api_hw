@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'; 
 import PokemonList from '../components/PokemonList';
-import PokemonDetails from '../components/PokemonDetails';
+
+
 
 const PokemonContainerBox = function () {
     const [pokemons, setPokemons] = useState([]);
-    const [selectedPokemon, setSeletedPokemon] = useState(null);
+    const [selectedPokemon, setSelectedPokemon] = useState(null);
+
 
     // the info we need is in the second url thats in the original API call 
     // promise 
@@ -19,8 +21,6 @@ const PokemonContainerBox = function () {
         })
         const results = await Promise.all(promises)
         setPokemons(results)
-        setSeletedPokemon(results[0])
-        console.log(results)
     }
 
     useEffect(() => {
@@ -28,8 +28,9 @@ const PokemonContainerBox = function () {
     },[])
 
     const handleSelectedPokemon = (pokemon) => {
-        setSeletedPokemon(pokemon)
+        setSelectedPokemon(pokemon)
     }
+
 
     return (
         <main className="main-pokemon-box-container">
@@ -37,12 +38,9 @@ const PokemonContainerBox = function () {
             <h2 className="pokemon-list-title">PokemonList</h2>
             <h2 className="pokemon-detail">Chosen Pokemon</h2>
             </header>
-            <section className="pokemon-list-section">
+            {/* <section className="pokemon-list-section"> */}
                 <PokemonList pokemons={pokemons} onPokemonClicked={handleSelectedPokemon} selectedPokemon={selectedPokemon}/>
-            </section>
-            {/* <section>
-                <PokemonDetails pokemon={selectedPokemon}/>
-            </section> */}
+            {/* </section> */}
        </main>
     )
 }

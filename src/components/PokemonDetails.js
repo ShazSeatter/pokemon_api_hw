@@ -10,6 +10,7 @@ const PokemonDetails = function ({pokemon, capitalize}) {
     const pokemonType = pokemon.types.map((type, index)=> {
         return <p key={index}>{type.type.name}</p>
     })
+
     return (
         <>
         <div className="pokemon-detail">
@@ -22,7 +23,7 @@ const PokemonDetails = function ({pokemon, capitalize}) {
             <div className="pokemon-abilities-list">
                 {pokemonAbilites}
             </div>
-            
+
             <div className="pokemon-types-list">
             <h4 className="types-title">Types:</h4>
                 {pokemonType}
