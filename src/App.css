@@ -71,11 +71,13 @@ a {
 .pokemon-card {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    /* justify-content: center;  */
     margin-right: 6rem;
 }
 
-
+.pokemon-card {
+    margin-left: 12rem;
+}
 .pokemon-img {
     height: 160px;
     width: 180px;
